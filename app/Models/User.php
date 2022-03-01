@@ -24,7 +24,7 @@ class User extends Authenticatable
         'nom',
     ];
 public function article(){
-    return $this->hasMany(Articles::class ,'id_article');
+    return $this->hasMany(Articles::class);
 }
     /**
      * The attributes that should be hidden for serialization.
