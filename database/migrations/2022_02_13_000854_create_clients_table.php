@@ -18,9 +18,11 @@ class CreateClientsTable extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('telephone')->nullable();
             $table->foreignId('id_type_article')->constrained('TypeArticles')->cacadeOnDelete();
             $table->timestamps();
+            
         });
     }
 

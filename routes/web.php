@@ -1,6 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\masterController;
+use App\Http\Controllers\myhomeController;
+use App\Http\Controllers\accueilController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\contactController;
+use App\Http\Controllers\produitController;
+use App\Http\Controllers\serviceController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +25,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-Route::get('/myhome', function () {
-    return view('myhome');});
- Route::get('/register', [RegisteredUserController::class, 'create']);
+    return view('dashboard');})->middleware(['auth'])->name('dashboard');
+Route::get('/myhome', [myhomeController::class, 'index']); 
+Route::get('/accueil', [accueilController::class, 'accueil']); 
+Route::get('/contact', [contactController::class, 'contact']); 
+Route::get('/service', [serviceController::class, 'service']); 
+Route::get('/master', [masterController::class, 'showpage']); 
+ Route::get('/register/create', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);
-
-
+Route::get('/article', [ArticleController::class, 'index']);
+Route::get('/bar', [TestController::class, 'bar']);    
 
 require __DIR__.'/auth.php';
