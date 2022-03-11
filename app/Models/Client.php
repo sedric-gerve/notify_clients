@@ -14,6 +14,10 @@ class Client extends Model
     }
      public function article(){
         return $this->belongsToMany(Article::class,"achat","id_client","id_article");
+     }
+        public function contact(){
+            return $this->hasOne(Contact::class);
         }
  }
+
 

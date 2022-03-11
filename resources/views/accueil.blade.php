@@ -1,4 +1,9 @@
 @extends("layouts.master")
+
+@section('title')
+page d'accueil
+@endsection
+
 @section("contenu")
 <div class="site-slider ">
         <li>

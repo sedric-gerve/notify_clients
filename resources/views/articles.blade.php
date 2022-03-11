@@ -1,4 +1,9 @@
 @extends("layouts.master")
+
+@section('title')
+page des articles
+@endsection
+
 @section("contenu")
 <div id="products" class="content-section">
         <div class="container">

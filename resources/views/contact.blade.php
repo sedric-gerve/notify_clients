@@ -1,5 +1,12 @@
 @extends("layouts.master")
+
+@section('title')
+page de contact
+@endsection
+
 @section("contenu")
+<form action="contacts.store" method = "post">
+    @csrf
 <div id="contact" class="content-section">
         <div class="container">
             <div class="row">
@@ -20,13 +27,13 @@
                     <div class="row contact-form">
                     
                         <fieldset class="col-md-6 col-sm-6">
-                            <input id="name" type="text" name="name" placeholder="Name">
+                            <input id="name" type="text" name="name" placeholder="Nom">
                         </fieldset>
                         <fieldset class="col-md-6 col-sm-6">
                             <input type="email" name="email" id="email" placeholder="Email">
                         </fieldset>
                         <fieldset class="col-md-12">
-                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                            <input type="text" name="subject" id="subject" placeholder="Sujet">
                         </fieldset>
                         <fieldset class="col-md-12">
                             <textarea name="comments" id="comments" placeholder="Message"></textarea>
@@ -41,4 +48,5 @@
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /#products -->
+</form>
 @endsection

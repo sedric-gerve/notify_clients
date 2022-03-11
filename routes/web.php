@@ -25,7 +25,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');})->middleware(['auth'])->name('dashboard');
 Route::get('/accueil', [accueilController::class, 'accueil']); 
-Route::get('/contact', [ContactController::class, 'index']); 
+Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact/create', [ContactController::class, 'create']);
+Route::post('/contact', [ContactController::class, 'store']); 
 Route::get('/master', [masterController::class, 'showpage']); 
  Route::get('/register/create', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);

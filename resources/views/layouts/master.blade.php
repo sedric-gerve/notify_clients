@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-    <title>notification des clients</title>
+    <title>@yield('title')</title>
     <meta name="description" content="">
 <!--
 
