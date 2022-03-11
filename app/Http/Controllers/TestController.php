@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 
 
-class TestController extends Controller
+class TestController extends Controllergi
 {
     
     public function bar()

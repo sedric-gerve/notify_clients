@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-    <title>Sprint HTML5 Template</title>
+    <title>notification des clients</title>
     <meta name="description" content="">
 <!--
 
@@ -30,10 +30,10 @@ https://templatemo.com/tm-401-sprint
 
 </head>
 <body>
-@include('partials.header')
-<main class="container">
-    @yield('contenu')
-</main>
- @include('partials.footer')
+       @include('partials.header')
+   <main class="container">
+       @yield('contenu')
+  </main>
+     @include('partials.footer')
 </body>
 </html>
