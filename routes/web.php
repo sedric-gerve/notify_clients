@@ -24,14 +24,13 @@ Route::get('/', function () {
 });
 Route::get('/dashboard', function () {
     return view('dashboard');})->middleware(['auth'])->name('dashboard');
-Route::get('/accueil', [accueilController::class, 'accueil']); 
-Route::get('/contact', [ContactController::class, 'index']);
-Route::get('/contact/create', [ContactController::class, 'create']);
+Route::get('/accueil', [accueilController::class, 'accueil'])->name('accueil'); 
+Route::get('/contact', [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store']); 
 Route::get('/master', [masterController::class, 'showpage']); 
  Route::get('/register/create', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);
-Route::get('/article', [ArticleController::class, 'index']);
+Route::get('/article', [ArticleController::class, 'index'])->name('article');
 Route::get('/bar', [TestController::class, 'bar']);    
 
 require __DIR__.'/auth.php';

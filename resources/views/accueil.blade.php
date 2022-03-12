@@ -15,6 +15,6 @@ page d'accueil
                 </div>
             </li>
     </div> <!-- /.site-slider -->
-    <p>consulter les articles <a href="/article"> ici</a></p>
-    <p>laissez vos contact via ce <a href="/contact">formulaire</a> pour recevoir des notifications </p>
+    <p>consulter les articles <a href="{{ route('article') }}"> ici</a></p>
+    <p>laissez vos contact via ce <a href="{{ route('contact') }}">formulaire</a> pour recevoir des notifications </p>
 @endsection

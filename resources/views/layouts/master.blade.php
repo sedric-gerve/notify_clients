@@ -34,6 +34,7 @@ https://templatemo.com/tm-401-sprint
    <main class="container">
        @yield('contenu')
   </main>
+  {{ config('database.connections.sqlite.driver') }}
      @include('partials.footer')
 </body>
 </html>

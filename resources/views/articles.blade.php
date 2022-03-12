@@ -136,5 +136,5 @@ page des articles
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /#products -->
-<p><a href="/accueil">revenir a la page d'accueil</a></p>
+<p><a href="{{ route('accueil') }}">revenir a la page d'accueil</a></p>
 @endsection
