@@ -9,6 +9,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Contact extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'nom',
+        'sujet',
+        'message',
+        'email',
+    ];
     public function client(){
         return $this->belongTo(Client::class);
     }

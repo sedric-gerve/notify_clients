@@ -25,6 +25,8 @@ https://templatemo.com/tm-401-sprint
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('css/templatemo_misc.css') }}">
     <link rel="stylesheet" href="{{ asset('css/templatemo_style.css') }}">
+    
+    
 
     <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
 

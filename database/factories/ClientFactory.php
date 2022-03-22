@@ -2,13 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\Articles;
+use App\Models\Client;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ArticlesFactory extends Factory
+class ClientFactory extends Factory
 {
-    protected $model = Articles::class;
-    /*
+    protected $model = Client::class;
+    /**
      * Define the model's default state.
      *
      * @return array
@@ -16,9 +16,10 @@ class ArticlesFactory extends Factory
     public function definition()
     {
         return [
-            'nom' => $this->faker->lastName(),
-            'prix' => $this->faker->randomNumber(3),
-            'id_utilisateur'=> $this->faker->numberBetween(1,10),
+            'nom' => $this->faker->name,
+            'prenom' => $this->faker->lastName,
+            'email' => $this->faker->unique()->safeEmail,
+            'telephone' => $this->faker->phoneNumber,
             'id_type_article'=> $this->faker->numberBetween(1,10),
         ];
     }

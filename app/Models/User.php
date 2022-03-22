@@ -21,7 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'nom',
+        
     ];
 public function article(){
     return $this->belongsToMany(Articles::class,"utilisateur_article","id_article" ,"id_utilisateur"); 

@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Articles extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'nom',
+        'prix',
+        'id_utilisateur',
+        'id_article',
+    
+    ];
     public function type(){
         return $this->belongsTo(Type_article::class,"id_type_article" ,"id");
     }

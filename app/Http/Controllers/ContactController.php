@@ -14,7 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contact');
+    //
     }
 
     /**
@@ -35,7 +35,22 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-       return 'le nom est'. $request->input('nom');
+        $request->validate([
+            'nom' => ['required', 'string', 'max:255'],
+            'sujet' => ['required', 'string', 'max:255'],
+            'message' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:contacts'],
+        ]);
+
+        $contact = Contact::create([
+            'nom' => $request->nom,
+            'sujet' => $request->sujet,
+            'message' => $request->message,
+            'email' => $request->email,
+           
+        ]);
+        
+           return "Votre contact a ete enregistrer avec succes";
     }
 
     /**

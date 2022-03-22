@@ -19,14 +19,14 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+ //   return view('welcome');
+//});
 Route::get('/dashboard', function () {
     return view('dashboard');})->middleware(['auth'])->name('dashboard');
-Route::get('/accueil', [accueilController::class, 'accueil'])->name('accueil'); 
+Route::get('/', [accueilController::class, 'accueil'])->name('accueil'); 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact');
-Route::post('/contact', [ContactController::class, 'store']); 
+Route::post('/contact/create', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/master', [masterController::class, 'showpage']); 
  Route::get('/register/create', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);

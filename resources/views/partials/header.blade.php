@@ -8,12 +8,12 @@
                         </div> <!-- /.logo -->
                     </div> <!-- /.col-md-4 -->
                     <div class="col-md-8 col-sm-6 col-xs-6">
-                        <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+                    <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
                         <div class="main-menu">
-                            <ul>
-                                <li><a href="#front">accueil</a></li>
-                                <li><a href="#products">articles</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="{{ route('accueil') }}">accueil</a></li>
+                                <li class="nav-item"><a  class="nav-link" href="{{ route('article') }}">articles</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                             </ul>
                         </div> <!-- /.main-menu -->
                     </div> <!-- /.col-md-8 -->
@@ -23,9 +23,9 @@
                         <div class="responsive">
                             <div class="main-menu">
                                 <ul>
-                                    <li><a href="#front">accueil</a></li>
-                                    <li><a href="#products">articles</a></li>
-                                    <li><a href="#contact">Contact</a></li>
+                                <li><a class="nav-link" href="{{ route('accueil') }}">accueil</a></li>
+                                <li><a  class="nav-link" href="{{ route('article') }}">articles</a></li>
+                                <li><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

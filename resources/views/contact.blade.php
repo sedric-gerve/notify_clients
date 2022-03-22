@@ -5,9 +5,11 @@ page de contact
 @endsection
 
 @section("contenu")
-<form action="contacts.store" method = "post">
+
+<form action="{{ route('contact.store') }}" method = "post">
     @csrf
-<div id="contact" class="content-section">
+   
+<div id="contact" class="content-section"
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -27,16 +29,16 @@ page de contact
                     <div class="row contact-form">
                     
                         <fieldset class="col-md-6 col-sm-6">
-                            <input id="name" type="text" name="name" placeholder="Nom">
+                            <input id="nom" type="text" name="nom" placeholder="Nom">
                         </fieldset>
                         <fieldset class="col-md-6 col-sm-6">
                             <input type="email" name="email" id="email" placeholder="Email">
                         </fieldset>
                         <fieldset class="col-md-12">
-                            <input type="text" name="subject" id="subject" placeholder="Sujet">
+                            <input type="text" name="sujet" id="sujet" placeholder="Sujet">
                         </fieldset>
                         <fieldset class="col-md-12">
-                            <textarea name="comments" id="comments" placeholder="Message"></textarea>
+                            <textarea name="message" id="message" placeholder="Message"></textarea>
                         </fieldset>
                         <fieldset class="col-md-12">
                             <input type="submit" name="send" value="Send Message" id="submit" class="button">
