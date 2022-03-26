@@ -18,6 +18,11 @@ class Client extends Model
         public function contact(){
             return $this->hasOne(Contact::class);
         }
+        public function commande(){
+            return $this->belongsToMany(Commande::class,"clients_commandes" ,"id_clients", "id_commandes");
+        }
  }
+
+
 
 

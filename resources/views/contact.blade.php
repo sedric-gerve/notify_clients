@@ -13,7 +13,7 @@ page de contact
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="section-title">Contact</h1>
+                    <h1 class="section-title  btn-primary">Contact</h1>
                 </div> <!-- /.col-md-12 -->
             </div> <!-- /.row -->
             <div class="row">

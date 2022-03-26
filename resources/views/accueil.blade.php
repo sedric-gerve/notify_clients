@@ -17,5 +17,6 @@ page d'accueil
     </div> <!-- /.site-slider -->
     
     <p>consulter les articles <a href="{{ route('article') }}"> ici</a></p>
+    <p>passer votre commande <a href="{{ route('commande') }}"> ici</a></p>
     <p>laissez vos contact via ce <a href="{{ route('contact') }}">formulaire</a> pour recevoir des notifications </p>
 @endsection

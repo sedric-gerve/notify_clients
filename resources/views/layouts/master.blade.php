@@ -31,12 +31,11 @@ https://templatemo.com/tm-401-sprint
     <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
 
 </head>
-<body>
+<body class="mb-20">
        @include('partials.header')
    <main class="container">
        @yield('contenu')
-  </main>
-  {{ config('database.connections.sqlite.driver') }}
+   </main>
      @include('partials.footer')
 </body>
 </html>

@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-md-8 col-sm-6">
                     <span id="copyright">
-                   	Copyright &copy; 2020 <a href="#">Company Name</a> . Design: Template Mo </span>
+                   	Copyright &copy; 2022<a href="#">kouamglobal</a> . Design:mail notification </span>
 
           </div> <!-- /.col-md-6 -->
                 <div class="col-md-4 col-sm-6">
