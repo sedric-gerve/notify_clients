@@ -1,2 +1,2 @@
-mon aplication est concu pour notifier des clients sur des articles acheter via des informations 
-qu'il aura renseigner a travers le formulaire d'achat des articles
+mon aplication est concu pour notifier des clients  par mails sur des articles commander via un formulaire
+qu'il aura renseigner les informations demander 
