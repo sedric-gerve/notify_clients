@@ -38,7 +38,7 @@ Route::post('/register', [RegisteredUserController::class, 'store']);
 Route::get('/article', [ArticleController::class, 'index'])->name('article');
 Route::get('/bar', [TestController::class, 'bar']);  
 Route::get('/liste-commandes', [CreerCommandeController::class, 'create'])->name('commande');
-Route::get('/creercommande', [CreerCommandeController::class, 'index'])->name('commande'); 
+Route::get('/creercommande', [CreerCommandeController::class, 'index'])->name('commande.create'); 
 Route::post('/creercommande', [CreerCommandeController::class, 'store'])->name('commande.store'); 
 
 require __DIR__.'/auth.php';

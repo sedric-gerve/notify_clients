@@ -3,12 +3,13 @@
 page des commandes
 @endsection
 @section("contenu")
-
-<h1 class="border-bottom pb-2">liste des commandes</h1>
-<div>
-    <div>
-        <a href="{{ route('commande') }}" class="btn btn-primary d-flex justify-content-end">ajouter une nouvelle commande</a>
-    </div>
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+   <h1 class="border-bottom pb-2">liste des commandes</h1>
+ <div class="mt-4">
+  <div  class="d-flex justify-content-between mb-4">
+        {{ $commandes->links() }}
+        <div><a href="{{ route('commande.create') }}" class="btn btn-primary">ajouter une nouvelle commande</a></div>
+ </div>
 <table class="table table-bordered table-hover"> 
    <thead> <!-- En-tête du tableau --> 
   <tr> 
@@ -34,6 +35,8 @@ page des commandes
   </tr> 
   @endforeach
  </tbody> 
+ 
  </table>
+ </div>
 </div>
 @endsection

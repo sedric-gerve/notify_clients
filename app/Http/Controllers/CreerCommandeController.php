@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Commande;
 use Illuminate\Http\Request;
+ 
+
 
 class CreerCommandeController extends Controller
 {
@@ -24,7 +26,7 @@ class CreerCommandeController extends Controller
      */
     public function create()
     {
-        $commandes=Commande::orderBy('ModeDePaiement','asc')->get();
+        $commandes=Commande::orderBy('ModeDePaiement','asc')->paginate(5);
         return view('commande',compact('commandes'));
     }
 
@@ -51,7 +53,7 @@ class CreerCommandeController extends Controller
            
         ]);
         
-           return "Votre commande a ete enregistrer avec succes";
+           return back()->with("success", "votre commande a ete enregistrer avec succes");
     }
 
     /**
