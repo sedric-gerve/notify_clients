@@ -10,6 +10,11 @@ page des commandes
         {{ $commandes->links() }}
         <div><a href="{{ route('commande.create') }}" class="btn btn-primary">ajouter une nouvelle commande</a></div>
  </div>
+ @if (session()->has("successDelete"))
+             <div class="alert alert-success">
+             <h3>{{session()->get("successDelete")}}</h3>
+             </div>
+ @endif 
 <table class="table table-bordered table-hover"> 
    <thead> <!-- En-tête du tableau --> 
   <tr> 
@@ -30,7 +35,12 @@ page des commandes
   <td>{{ $commande->article_commander }}</td> 
   <td>{{ $commande->email }}</td>
   <td><a href="#" class="btn btn-info">Editer</a>
-      <a href="#" class="btn btn-danger">Supprimer</a>
+      <a href="#" class="btn btn-danger" onclick="if(confirm('Voulez-vous vraiment supprimer cet commande?'))
+      {document.getElementById('form-{{$commande->id}}').submit()}">Supprimer</a>
+      <form id="form-{{$commande->id}}"  action="{{route('commande.supprimer', ['commande'=>$commande->id])}}" method="post">
+          @csrf
+          <input type="hidden" name="_method" value="delete">
+      </form>
  </td>  
   </tr> 
   @endforeach

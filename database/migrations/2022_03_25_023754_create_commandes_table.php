@@ -15,9 +15,10 @@ class CreateCommandesTable extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
-            $table->integer('prix');
-            $table->string('ModeDePaiement');
             $table->string('article_commander');
+            $table->string('ModeDePaiement');
+            $table->integer('prix');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

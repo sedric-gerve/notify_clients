@@ -19,14 +19,14 @@ page des commandes
                  @endforeach
             </ul>
             @endif
-            <form action="{{ route('commande.store') }}" method="post" >
+            <form action="{{ route('commande.update', ['commande'=>$commande->id]) }}" method="post" >
                 @csrf
                 <div class="mb-3">
                     <input type="text" class="form-control" id="article_commander" name="article_commander" placeholder="Article_commander">
                 </div>
                 <div class="mb-3">
                     <input type="text" class="form-control" id="ModeDePaiement" name="ModeDePaiement" placeholder="ModeDePaiement">
-               
+                
                 </div>
                 <div class="mb-3">
                     <input type="text" class="form-control" id="prix" name="prix" placeholder="Prix de l'article">

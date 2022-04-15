@@ -73,9 +73,10 @@ class CreerCommandeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Commande $commande)
     {
-        //
+        
+        return view('editCommande',compact('commande'));
     }
 
     /**
@@ -85,9 +86,24 @@ class CreerCommandeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Commande $commande)
     {
-        //
+        $request->validate([
+            'article_commander' => ['required', 'string', 'max:255'],
+            'ModeDePaiement' => ['required', 'string', 'max:255'],
+            'prix' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'max:255'],
+        ]);
+
+        $commande->update([
+            'article_commander' => $request->article_commander,
+            'ModeDePaiement' => $request->ModeDePaiement,
+            'prix' => $request->prix,
+            'email' => $request->email,
+           
+        ]);
+        
+           return back()->with("success", "votre commande a ete mise a jour avec succes");
     }
 
     /**
@@ -96,8 +112,10 @@ class CreerCommandeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Commande $commande)
     {
-        //
+        $article= $commande->article_commander;
+        $commande->delete();
+        return back()->with("successDelete", " La Commande $article supprimer avec succes!");
     }
 }

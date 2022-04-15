@@ -24,5 +24,6 @@
     <script src="{{ asset('js/jquery.easing-1.3.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/plugins.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <!-- templatemo 401 sprint -->
